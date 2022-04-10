@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import getImages from '../../../utils/APIs/getImages';
+import Main from './Main';
+import Header from './Header';
+import Footer from './Footer';
+import { ImageUl, ImgLi } from './styles';
 
 export default function ListImages() {
   const [imagesState, setImagesState] = useState([]);
   useEffect(() => {
     const get = async () => {
-      const images = await getImages(20);
+      const images = await getImages();
       setImagesState(images);
     };
     get();
   }, []);
+
   return (
     <div>
-      <ul>
+      <ImageUl>
         {
-          imagesState && imagesState.map((src) => (
-            <li key={src}>
-              <div>
-                <img src={src} alt={`${src}`} width="100px" />
-              </div>
-            </li>
+          imagesState && imagesState.map((imageUrl) => (
+            <ImgLi key={imageUrl}>
+              <Header />
+              <Main imageUrl={imageUrl} />
+              <Footer />
+            </ImgLi>
           ))
         }
-      </ul>
+      </ImageUl>
     </div>
   );
 }
