@@ -5,15 +5,25 @@ import Header from './Header';
 import Footer from './Footer';
 import { ImageUl, ImgLi } from './styles';
 
-export default function ListImages() {
+export default function ListImages(props) {
+  const { reload } = props;
   const [imagesState, setImagesState] = useState([]);
+
+  const get = async () => {
+    const images = await getImages();
+    setImagesState(images);
+  };
+
   useEffect(() => {
-    const get = async () => {
-      const images = await getImages();
-      setImagesState(images);
-    };
     get();
   }, []);
+
+  useEffect(() => {
+    if (reload) {
+      setImagesState([]);
+      get();
+    }
+  }, [reload]);
 
   return (
     <div>
