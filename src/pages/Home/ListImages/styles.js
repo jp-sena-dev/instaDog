@@ -14,9 +14,10 @@ export const ImgLi = styled.li`
   grid-template-rows: 10% 80% 10%;
   
   margin: 10px 0;
-  border: 1px solid black;
+  border: 1px solid #00000030;
 
   height: 95vh;
+  width: 40%;
 
   @media(max-width: 1080px) {
     width: 50%;

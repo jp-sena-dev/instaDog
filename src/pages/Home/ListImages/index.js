@@ -23,7 +23,7 @@ export default function ListImages() {
             <ImgLi key={imageUrl}>
               <Header />
               <Main imageUrl={imageUrl} />
-              <Footer />
+              <Footer imageUrl={imageUrl} />
             </ImgLi>
           ))
         }
