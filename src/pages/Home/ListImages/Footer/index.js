@@ -8,7 +8,7 @@ export default function Footer(props) {
   const { imageUrl } = props;
   return (
     <FooterDiv>
-      <Heart />
+      <Heart imageUrl={imageUrl} />
       <Plane imageUrl={imageUrl} />
     </FooterDiv>
   );

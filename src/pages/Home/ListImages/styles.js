@@ -11,12 +11,11 @@ export const ImgLi = styled.li`
   list-style-type: none;
   
   display: grid;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 50px min-content 50px;
   
   margin: 10px 0;
   border: 1px solid #00000030;
-
-  height: 95vh;
+  
   width: 40%;
 
   @media(max-width: 1080px) {
@@ -31,12 +30,8 @@ export const ImgLi = styled.li`
     width: 80%;
   }
 
-  @media(max-width: 400px) {
-    width: 95%;
-  }
-
-  @media(max-width: 360px) {
-    width: 98vw;
+  @media(max-width: 425px) {
+    width: 99vw;
   }
 `;
 

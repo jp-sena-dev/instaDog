@@ -1,16 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { useImages } from '../../context/ImagesContext';
+import React, { useState } from 'react';
 import Button from './styles';
 import ListImages from './ListImages';
 
 export default function Home() {
-  const { name, changeName } = useImages();
   const [reload, setReload] = useState(false);
-
-  useEffect(() => {
-    changeName('eric');
-    console.log(name);
-  }, [name, changeName]);
 
   const changeReload = () => {
     setTimeout(() => {
