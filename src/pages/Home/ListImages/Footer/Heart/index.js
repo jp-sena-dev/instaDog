@@ -7,7 +7,7 @@ export default function Heart(props) {
   const { imageUrl } = props;
 
   const { checkInList, addLikeList, removeLikesList } = useImages();
-  const inList = checkInList(imageUrl);
+  const inList = checkInList(imageUrl, 'likeList');
 
   const [enjoy, setEnjoy] = useState(inList);
   const [animation, setAnimation] = useState(false);
@@ -36,7 +36,7 @@ export default function Heart(props) {
       addLikeList(imageUrl, 'likeList');
       setEnjoy(!enjoy);
     } else {
-      removeLikesList(imageUrl);
+      removeLikesList(imageUrl, 'likeList');
       setEnjoy(!enjoy);
     }
 

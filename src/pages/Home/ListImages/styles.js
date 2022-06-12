@@ -26,7 +26,7 @@ export const ImgLi = styled.li`
     width: 400px;
   }
 
-  @media(max-width: 560px){
+  @media(max-width: 400px){
     width: 99vw;
   }
 `;
