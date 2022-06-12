@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const HamburgerIcon = styled.p`
   cursor: pointer;
@@ -6,6 +7,12 @@ export const HamburgerIcon = styled.p`
 
 export const DivMain = styled.div`
   position: relative;
+`;
+
+export const MLink = styled(Link)`
+  color: black;
+  width: 100%;
+  text-decoration: none;
 `;
 
 export const Ul = styled.ul`

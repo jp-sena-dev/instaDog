@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Div = styled.div`
   display: flex;
@@ -11,6 +12,11 @@ export const Div = styled.div`
   @media(min-width: 1024px) {
     justify-content: space-around;
   }
+`;
+
+export const H1Link = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
 
 export const H1Dog = styled.h1`

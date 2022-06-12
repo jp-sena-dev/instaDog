@@ -3,6 +3,7 @@ import {
   Ul,
   Li,
   Icon,
+  MLink,
   DivMain,
   ItemsMenu,
   Paragraph,
@@ -22,10 +23,12 @@ export default function Menu() {
       <HamburgerIcon onClick={handleChange}>|||</HamburgerIcon>
       <ItemsMenu show={show}>
         <Ul>
-          <Li>
-            <Icon className="icon-bookmark" />
-            <Paragraph>salvos</Paragraph>
-          </Li>
+          <MLink to="/salvos">
+            <Li>
+              <Icon className="icon-bookmark" />
+              <Paragraph>salvos</Paragraph>
+            </Li>
+          </MLink>
           <Li>
             <Icon>+</Icon>
             <Paragraph>projetos</Paragraph>
