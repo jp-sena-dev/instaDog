@@ -57,6 +57,8 @@ export const ItemsMenu = styled.div`
   transition: 0.5s;
   position: absolute;
   right: 1px;
+  
+  z-index: 10;
 
   background-color: white;
   border: 1px solid #00000030;
