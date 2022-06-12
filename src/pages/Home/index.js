@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from './styles';
+import Nav from '../../components/Nav';
 import ListImages from './ListImages';
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
 
   return (
     <div>
-      <h2>Home</h2>
+      <Nav />
       <ListImages reload={reload} />
       <Button onClick={changeReload}>Mais imagens</Button>
     </div>
