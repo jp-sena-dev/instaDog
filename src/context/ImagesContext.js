@@ -89,12 +89,12 @@ export default function ImagesProvider({ children }) {
 
   const contextValue = useMemo(() => ({
     likeList,
+    savedList,
     checkInList,
     addLikeList,
     removeLikesList,
-    listBookeMarkSaved,
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }), [addLikeList, checkInList, likeList, removeLikesList, listBookeMarkSaved]);
+  }), [addLikeList, checkInList, likeList, savedList, removeLikesList]);
 
   return (
     <ImagesContext.Provider value={contextValue}>
