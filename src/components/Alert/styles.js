@@ -4,21 +4,21 @@ export const DivAlert = styled.div`
   transition: 0.5s;
   position: fixed;
   top: 0;
+  left: 0;
   left: ${({ display }) => {
     if (display === 'none') {
-      return '-155px';
+      return 'opacity: 0; visibility: hidden; width: 0px; font-size: 0;';
     }
-    return '0.5px';
+    return 'opacity: 1; visibility: visible; width: 150px; font-size: 1em;';
   }};
   height: 40px;
-  width: 150px;
-  border: solid 1px black;
+  border: 1px solid #00000030;
   background-color: #0971B3;
 `;
 
 export const Section = styled.section`
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: 90%;
   background-color: white;
   z-index: 10;
 `;

@@ -5,7 +5,7 @@ export default function Alert(props) {
   const { display } = props;
   return (
     <DivAlert display={display}>
-      <Section>Copiado</Section>
+      <Section>Copiado...</Section>
     </DivAlert>
   );
 }

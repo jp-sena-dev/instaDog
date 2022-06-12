@@ -11,5 +11,6 @@ export const DivImage = styled.div`
   justify-content: center;
   align-items: center;
   background-color: black;
-  max-height: 60vh;
+  min-height: 100%;
+  max-height: max-content;
 `;

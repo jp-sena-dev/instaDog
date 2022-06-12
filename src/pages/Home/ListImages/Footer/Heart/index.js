@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import IconHeart from './styles';
-import { useImages } from '../../../../../context/ImagesContext';
 import '../../../../../assets/icons/icomoon/style.css';
+import { useImages } from '../../../../../context/ImagesContext';
 
 export default function Heart(props) {
   const { imageUrl } = props;
@@ -33,7 +33,7 @@ export default function Heart(props) {
 
   const handleChange = () => {
     if (!enjoy) {
-      addLikeList(imageUrl);
+      addLikeList(imageUrl, 'likeList');
       setEnjoy(!enjoy);
     } else {
       removeLikesList(imageUrl);

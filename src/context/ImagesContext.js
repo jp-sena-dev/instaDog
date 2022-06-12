@@ -17,23 +17,29 @@ const ImagesContext = createContext({});
 
 export default function ImagesProvider({ children }) {
   const [likeList, setLikeList] = useState(!likeListSaved ? [] : likeListSaved);
+  const [savedList, setSavedList] = useState(!likeListSaved ? [] : likeListSaved);
 
-  const addLikeList = useCallback((item) => {
-    if (typeof item !== 'string') {
-      throw new Error('name must be a string');
+  const addLikeList = useCallback((item, list) => {
+    if (list === 'likeList') {
+      if (!likeList.length) {
+        setLikeList([item]);
+      } else if (likeList.length) {
+        setLikeList([item, ...likeList]);
+      }
+    } else if (list === 'savedList') {
+      if (!savedList.length) {
+        setSavedList([item]);
+      } else if (savedList.length) {
+        setSavedList([item, ...likeList]);
+      }
     }
-    if (!likeList.length) {
-      setLikeList([item]);
-    } else if (likeList.length) {
-      setLikeList([item, ...likeList]);
-    }
-  }, [likeList]);
+  }, [likeList, savedList]);
 
   const removeLikesList = useCallback((item) => {
     const editedList = [];
     likeList.map((element) => {
       if (element !== item) {
-        editedList.push(item);
+        editedList.push(element);
       }
       return item;
     });
@@ -43,6 +49,10 @@ export default function ImagesProvider({ children }) {
   useEffect(() => {
     setStorage('likeList', likeList);
   }, [likeList]);
+
+  useEffect(() => {
+    setStorage('savedList', savedList);
+  }, [savedList]);
 
   const checkInList = useCallback((item) => {
     let thereIs = false;

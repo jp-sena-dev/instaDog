@@ -16,21 +16,17 @@ export const ImgLi = styled.li`
   margin: 10px 0;
   border: 1px solid #00000030;
   
-  width: 40%;
+  width: 400px;
 
-  @media(max-width: 1080px) {
-    width: 50%;
+  @media(max-width: 1020px) {
+    width: 45%;
   }
 
   @media(max-width: 768px) {
-    width: 70%;
+    width: 400px;
   }
 
   @media(max-width: 560px){
-    width: 80%;
-  }
-
-  @media(max-width: 425px) {
     width: 99vw;
   }
 `;

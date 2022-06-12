@@ -39,9 +39,9 @@ export const Li = styled.li`
 
 const setDisplay = (state) => {
   if (state) {
-    return 'opacity: 1; visibility: visible; height: 120px; width: 120px;';
+    return 'opacity: 1; visibility: visible; height: 120px; width: 120px;font-size: 1em;';
   }
-  return 'opacity: 0; visibility: hidden; height: 0px; width: 0px;';
+  return 'opacity: 0; visibility: hidden; height: 0px; width: 0px;font-size: 0;';
 };
 
 export const ItemsMenu = styled.div`

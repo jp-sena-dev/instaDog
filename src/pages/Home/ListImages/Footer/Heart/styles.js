@@ -15,6 +15,11 @@ const IconHeart = styled.i`
   margin-right: 6px;
   margin-left: 2px;
 
+  transition: 0.3s;
+  :hover {
+    color: ${({ color }) => (`rgb(${color} / 83%)`)};
+  }
+
 `;
 
 export default IconHeart;
