@@ -1,17 +1,36 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const HamburgerIcon = styled.p`
+export const MIcon = styled.p`
   cursor: pointer;
+  font-size: 1.5rem;
 `;
 
 export const DivMain = styled.div`
   position: relative;
 `;
 
+export const MA = styled.a`
+  color: black;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  text-decoration: none;
+`;
+
 export const MLink = styled(Link)`
   color: black;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
+
   text-decoration: none;
 `;
 
@@ -25,19 +44,34 @@ export const Ul = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+    
+  li:first-of-type {
+    border-radius: 10px 0 0 0;
+  }
+
+  li:last-of-type {
+    border-radius: 0 0 12px 12px;
+  }
 `;
 
 export const Li = styled.li`
+  list-style-type: none;
+
+  color: black;
+  color: black;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  list-style-type: none;
 
-  
   width: 100%;
   height: 2em;
 
   cursor: pointer;
+
+  li {
+    border-radius: 0 0 0 0;
+  }
 
   :hover {
     background-color: #00000030;

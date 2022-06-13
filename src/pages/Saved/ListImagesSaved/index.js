@@ -18,7 +18,11 @@ export default function ListImagesSaved() {
   return (
     <Lmain>
       <LUl>
-        {list.map((image) => <LLi key={image}><LImg src={image} alt="ft-salva" /></LLi>)}
+        {list.map((image) => (
+          <LLi key={image}>
+            <LImg src={image} alt="ft-salva" />
+          </LLi>
+        ))}
       </LUl>
     </Lmain>
   );

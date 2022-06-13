@@ -18,6 +18,8 @@ export const LLi = styled.li`
   list-style-type: none;  
   background-color: black;
 
+  cursor: pointer;
+
   position: relative;
 
   margin: 1% 1%;
