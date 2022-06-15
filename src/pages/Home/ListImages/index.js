@@ -22,7 +22,6 @@ export default function ListImages() {
       addList(images, 'feed');
     } else {
       const images = await getImages();
-      console.log([...list, ...images]);
       addList([...list, ...images], 'feed');
     }
   };

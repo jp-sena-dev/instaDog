@@ -5,12 +5,14 @@ export const LUl = styled.ul`
   flex-wrap: wrap;
   justify-content: flex-start;
   padding: 0;
+  margin: 0;
   width: 100%;
 `;
 
 export const Lmain = styled.div`
   display: block;
-  margin: auto;
+  margin: 0 auto;
+  min-height: 80vh;
   max-width: 768px;
 `;
 

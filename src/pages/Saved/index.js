@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
 import ListImagesSaved from './ListImagesSaved';
 
 export default function Saved() {
@@ -7,6 +8,7 @@ export default function Saved() {
     <div>
       <Nav />
       <ListImagesSaved />
+      <Footer />
     </div>
   );
 }

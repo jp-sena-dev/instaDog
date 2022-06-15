@@ -16,6 +16,7 @@ export const Div = styled.div`
   background-color: whitesmoke;
 
   width: 100%;
+  height: 10vh;
 
   @media(min-width: 1024px) {
     justify-content: space-around;
