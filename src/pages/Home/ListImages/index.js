@@ -1,36 +1,68 @@
 import React, { useEffect, useState } from 'react';
-import getImages from '../../../utils/APIs/getImages';
 import Main from './Main';
 import Header from './Header';
 import Footer from './Footer';
-import { ImageUl, ImgLi } from './styles';
+import getImages from '../../../utils/APIs/getImages';
+import { useImages } from '../../../context/ImagesContext';
+import {
+  ImgLi,
+  ImageUl,
+  Loading,
+  DivObserver,
+} from './styles';
 
-export default function ListImages(props) {
-  const { reload } = props;
-  const [imagesState, setImagesState] = useState([]);
+export default function ListImages() {
+  const [loading, setLoading] = useState(true);
+  const { feed, addList } = useImages();
+  const [currentPage, setCurrentPage] = useState(0);
 
-  const get = async () => {
-    const images = await getImages();
-    setImagesState(images);
+  const get = async (list) => {
+    if (!list.length) {
+      const images = await getImages();
+      addList(images, 'feed');
+    } else {
+      const images = await getImages();
+      console.log([...list, images]);
+      addList([...list, ...images], 'feed');
+    }
   };
 
   useEffect(() => {
-    get();
+    get(feed);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPage]);
+
+  useEffect(() => {
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => (entry.isIntersecting))) {
+        setCurrentPage((currentValue) => currentValue + 1);
+      }
+    });
+    intersectionObserver.observe(document.querySelector('.observer'));
+    return () => intersectionObserver.disconnect();
   }, []);
 
   useEffect(() => {
-    if (reload) {
-      setImagesState([]);
-      get();
+    if (!feed) {
+      setLoading(false);
     }
-  }, [reload]);
+  }, [feed]);
+
+  if (!loading && !feed.length) {
+    return (
+      <div>
+        <Loading />
+        <DivObserver className="observer" />
+      </div>
+    );
+  }
 
   return (
     <div>
       <ImageUl>
         {
-          imagesState && imagesState.map((imageUrl) => (
-            <ImgLi key={imageUrl}>
+          feed && feed.map((imageUrl) => (
+            <ImgLi>
               <Header />
               <Main imageUrl={imageUrl} />
               <Footer imageUrl={imageUrl} />
@@ -38,6 +70,7 @@ export default function ListImages(props) {
           ))
         }
       </ImageUl>
+      <DivObserver className="observer" />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { useImages } from '../../../../../context/ImagesContext';
 export default function Heart(props) {
   const { imageUrl } = props;
 
-  const { checkInList, addLikeList, removeLikesList } = useImages();
+  const { checkInList, addList, removeList } = useImages();
   const inList = checkInList(imageUrl, 'likeList');
 
   const [enjoy, setEnjoy] = useState(inList);
@@ -33,10 +33,10 @@ export default function Heart(props) {
 
   const handleChange = () => {
     if (!enjoy) {
-      addLikeList(imageUrl, 'likeList');
+      addList(imageUrl, 'likeList');
       setEnjoy(!enjoy);
     } else {
-      removeLikesList(imageUrl, 'likeList');
+      removeList(imageUrl, 'likeList');
       setEnjoy(!enjoy);
     }
 

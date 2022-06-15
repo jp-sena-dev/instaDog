@@ -5,7 +5,7 @@ import { useImages } from '../../../../../context/ImagesContext';
 
 export default function Bookmark(props) {
   const { imageUrl } = props;
-  const { addLikeList, removeLikesList, checkInList } = useImages();
+  const { addList, removeList, checkInList } = useImages();
   const [inList, setInList] = useState(checkInList(imageUrl, 'savedList'));
   const [color, setColor] = useState('');
 
@@ -20,19 +20,14 @@ export default function Bookmark(props) {
 
   const handleChange = () => {
     if (!inList) {
-      addLikeList(imageUrl, 'savedList');
+      addList(imageUrl, 'savedList');
       setColor('gray');
       setInList(!inList);
     } else {
-      removeLikesList(imageUrl, 'savedList');
+      removeList(imageUrl, 'savedList');
       setColor('black');
       setInList(!inList);
     }
-
-    // setAnimation(true);
-    // setTimeout(() => {
-    //   setAnimation(false);
-    // }, 200);
   };
 
   return (

@@ -5,10 +5,18 @@ export const Div = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
-  @media(max-width: 768px) {
-    padding: 0;
-  }
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  box-shadow: 0px 5px 11px 0px #00000016;
+
+  background-color: whitesmoke;
+
+  width: 100%;
+
   @media(min-width: 1024px) {
     justify-content: space-around;
   }

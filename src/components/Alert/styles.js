@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const DivAlert = styled.div`
   transition: 0.5s;
   position: fixed;
+  z-index: 11;
   top: 0;
   left: 0;
   left: ${({ display }) => {

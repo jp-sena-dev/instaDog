@@ -19,8 +19,9 @@ const ImagesContext = createContext({});
 export default function ImagesProvider({ children }) {
   const [likeList, setLikeList] = useState(!likeListSaved ? [] : likeListSaved);
   const [savedList, setSavedList] = useState(!listBookeMarkSaved ? [] : listBookeMarkSaved);
+  const [feed, setFeed] = useState([]);
 
-  const addLikeList = useCallback((item, list) => {
+  const addList = useCallback((item, list) => {
     if (list === 'likeList') {
       if (!likeList.length) {
         setLikeList([item]);
@@ -33,10 +34,12 @@ export default function ImagesProvider({ children }) {
       } else if (savedList.length) {
         setSavedList([item, ...savedList]);
       }
+    } else if (list === 'feed') {
+      setFeed(item);
     }
   }, [likeList, savedList]);
 
-  const removeLikesList = useCallback((item, list) => {
+  const removeList = useCallback((item, list) => {
     const editedList = [];
     let thisList = [];
 
@@ -88,13 +91,13 @@ export default function ImagesProvider({ children }) {
   }, [likeList, savedList]);
 
   const contextValue = useMemo(() => ({
+    feed,
+    addList,
     likeList,
     savedList,
+    removeList,
     checkInList,
-    addLikeList,
-    removeLikesList,
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }), [addLikeList, checkInList, likeList, savedList, removeLikesList]);
+  }), [feed, addList, checkInList, likeList, savedList, removeList]);
 
   return (
     <ImagesContext.Provider value={contextValue}>

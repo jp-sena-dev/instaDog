@@ -7,6 +7,26 @@ export const ImageUl = styled.ul`
   align-items: center;
 `;
 
+export const Loading = styled.div`
+  display: block;
+  animation: is-rotating 2s infinite;
+
+  border: 1px solid white;
+  border-top-color: black;
+  border-radius: 50%;
+
+  margin: 10px auto;
+
+  height: 50px;
+  width: 50px;
+
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+`;
+
 export const ImgLi = styled.li`
   list-style-type: none;
   
@@ -34,4 +54,10 @@ export const ImgLi = styled.li`
 export const DivLi = styled.div`
   height: 100%;
   width: 100%;
+`;
+
+export const DivObserver = styled.div`
+  position: relative;
+  bottom: 0;
+  left: 0;
 `;
