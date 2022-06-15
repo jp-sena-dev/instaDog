@@ -22,7 +22,7 @@ export default function ListImages() {
       addList(images, 'feed');
     } else {
       const images = await getImages();
-      console.log([...list, images]);
+      console.log([...list, ...images]);
       addList([...list, ...images], 'feed');
     }
   };
@@ -35,7 +35,7 @@ export default function ListImages() {
   useEffect(() => {
     const intersectionObserver = new IntersectionObserver((entries) => {
       if (entries.some((entry) => (entry.isIntersecting))) {
-        setCurrentPage((currentValue) => currentValue + 1);
+        setCurrentPage((currentValue) => (currentValue + 1));
       }
     });
     intersectionObserver.observe(document.querySelector('.observer'));
@@ -62,7 +62,7 @@ export default function ListImages() {
       <ImageUl>
         {
           feed && feed.map((imageUrl) => (
-            <ImgLi>
+            <ImgLi key={imageUrl}>
               <Header />
               <Main imageUrl={imageUrl} />
               <Footer imageUrl={imageUrl} />
