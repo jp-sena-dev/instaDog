@@ -6,6 +6,7 @@ import {
   Lmain,
 } from './styles';
 import { useImages } from '../../../context/ImagesContext';
+import Carousel from '../../../components/Carousel';
 
 export default function ListImagesSaved() {
   const { savedList } = useImages();
@@ -19,11 +20,12 @@ export default function ListImagesSaved() {
     <Lmain>
       <LUl>
         {list.map((image) => (
-          <LLi key={image}>
+          <LLi key={image} onClick={() => console.log('olá')}>
             <LImg src={image} alt="ft-salva" />
           </LLi>
         ))}
       </LUl>
+      <Carousel />
     </Lmain>
   );
 }

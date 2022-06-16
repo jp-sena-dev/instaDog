@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const ImgDiv = styled.div`
+  min-height: 80vh;
+`;
+
 export const ImageUl = styled.ul`
   display: flex;
   padding: 0;

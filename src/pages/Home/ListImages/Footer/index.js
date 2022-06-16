@@ -5,7 +5,7 @@ import { FooterDiv } from './styles';
 import '../../../../assets/icons/icomoon/style.css';
 import Bookmark from './Bookmark';
 
-export default function Footer(props) {
+export default function ListFooter(props) {
   const { imageUrl } = props;
   return (
     <FooterDiv>

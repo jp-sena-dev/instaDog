@@ -24,32 +24,26 @@ export const LLi = styled.li`
 
   position: relative;
 
-  margin: 1% 1%;
+  margin: 0.5%;
+  width: 32.2%;
+
 
   @media(min-width: 1020px) {
-    width: 240px;
-    height: 200px;
+    height: 250px;
   }
 
   @media(max-width: 1020px) {
-    width: 240px;
-    height: 200px;
+    height: 250px;
   }
 
   @media(max-width: 781px) {
-    width: 235px;
-    height: 200px;
+    height: 250px;
   }
 
   @media(max-width: 768px) {
-    width: 30.6vw;
-    height: 20vh;
+    height: 25vh;
   }
 
-  @media(max-width: 637px) {
-    width: 30.5%;
-    height: 20vh;
-  }
 
   ::after {
     content: '';

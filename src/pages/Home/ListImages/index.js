@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Main from './Main';
 import Header from './Header';
-import Footer from './Footer';
+import ListFooter from './Footer';
 import getImages from '../../../utils/APIs/getImages';
 import { useImages } from '../../../context/ImagesContext';
 import {
   ImgLi,
+  ImgDiv,
   ImageUl,
   Loading,
   DivObserver,
@@ -57,19 +58,19 @@ export default function ListImages() {
   }
 
   return (
-    <div>
+    <ImgDiv>
       <ImageUl>
         {
           feed && feed.map((imageUrl) => (
             <ImgLi key={imageUrl}>
               <Header />
               <Main imageUrl={imageUrl} />
-              <Footer imageUrl={imageUrl} />
+              <ListFooter imageUrl={imageUrl} />
             </ImgLi>
           ))
         }
       </ImageUl>
       <DivObserver className="observer" />
-    </div>
+    </ImgDiv>
   );
 }

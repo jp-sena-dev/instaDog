@@ -1,5 +1,5 @@
 import React from 'react';
-import { FDiv, FFooter } from './styled';
+import { FDiv, FFooter } from './styles';
 
 export default function Footer() {
   return (
