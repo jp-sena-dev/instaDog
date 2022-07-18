@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Main from './Main';
-import Header from './Header';
-import ListFooter from './Footer';
+import MainItemFeed from '../../../components/MainItemFeed';
+import HeaderItemImg from '../../../components/HeaderItemImg';
+import FooterItemFeed from '../../../components/FooterItemFeed';
 import getImages from '../../../utils/APIs/getImages';
 import { useImages } from '../../../context/ImagesContext';
 import {
@@ -63,9 +63,9 @@ export default function ListImages() {
         {
           feed && feed.map((imageUrl) => (
             <ImgLi key={imageUrl}>
-              <Header />
-              <Main imageUrl={imageUrl} />
-              <ListFooter imageUrl={imageUrl} />
+              <HeaderItemImg />
+              <MainItemFeed imageUrl={imageUrl} />
+              <FooterItemFeed imageUrl={imageUrl} />
             </ImgLi>
           ))
         }

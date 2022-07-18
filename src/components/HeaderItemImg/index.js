@@ -1,8 +1,8 @@
 import React from 'react';
 import { HeaderDiv, ImgProfile } from './styles';
-import profileTheDog from '../../../../assets/imgs/profileTheDog.jpeg';
+import profileTheDog from '../../assets/imgs/profileTheDog.jpeg';
 
-export default function Header() {
+export default function HeaderItemImg() {
   return (
     <HeaderDiv>
       <ImgProfile

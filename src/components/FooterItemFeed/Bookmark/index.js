@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Icon } from './styles';
-import '../../../../../assets/icons/icomoon/style.css';
-import { useImages } from '../../../../../context/ImagesContext';
+import '../../../assets/icons/icomoon/style.css';
+import { useImages } from '../../../context/ImagesContext';
 
 export default function Bookmark(props) {
   const { imageUrl } = props;

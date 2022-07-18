@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IconPlane } from './styles';
-import Alert from '../../../../../components/Alert';
-import '../../../../../assets/icons/icomoon/style.css';
+import Alert from '../../Alert';
+import '../../../assets/icons/icomoon/style.css';
 
 export default function Plane(props) {
   const { imageUrl } = props;
