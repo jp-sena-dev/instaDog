@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Icon } from './styles';
+import { SIcon } from './styles';
 import '../../../assets/icons/icomoon/style.css';
 import { useImages } from '../../../context/ImagesContext';
 
-export default function Bookmark(props) {
-  const { imageUrl } = props;
+export default function Bookmark({ imageUrl }) {
   const { addList, removeList, checkInList } = useImages();
   const [inList, setInList] = useState(checkInList(imageUrl, 'savedList'));
   const [color, setColor] = useState('');
@@ -15,8 +14,7 @@ export default function Bookmark(props) {
     } else {
       setColor('gray');
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [inList]);
 
   const handleChange = () => {
     if (!inList) {
@@ -31,7 +29,7 @@ export default function Bookmark(props) {
   };
 
   return (
-    <Icon
+    <SIcon
       onClick={handleChange}
       className="icon-bookmark"
       color={color}

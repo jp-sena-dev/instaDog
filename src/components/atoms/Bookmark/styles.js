@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Icon = styled.i`
+export const SIcon = styled.i`
   font-size: 1.6em;
   color: ${({ color }) => (`${color}`)};
   cursor: pointer;
