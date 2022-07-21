@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiFillHome } from 'react-icons/ai';
 import CustomRounterLink from '../../atoms/CustomRounterLink';
+import CustomLink from '../../atoms/CustomLink';
 import {
-  Ul,
-  Li,
-  Icon,
-  MIcon,
-  DivMain,
-  ItemsMenu,
+  SUl,
+  SLi,
+  SIcon,
+  SDivMain,
+  SItemsMenu,
+  SBurgerIcon,
 } from './styles';
 import '../../../assets/icons/icomoon/style.css';
-import CustomLink from '../../atoms/CustomLink';
 
 export default function Menu() {
   const [show, setShow] = useState(false);
@@ -20,30 +20,30 @@ export default function Menu() {
   };
 
   return (
-    <DivMain>
-      <MIcon onClick={handleChange}><AiOutlineMenu /></MIcon>
-      <ItemsMenu show={show}>
-        <Ul>
-          <Li>
+    <SDivMain>
+      <SBurgerIcon onClick={handleChange}><AiOutlineMenu /></SBurgerIcon>
+      <SItemsMenu show={show}>
+        <SUl>
+          <SLi>
             <CustomRounterLink to="/">
-              <Icon><AiFillHome /></Icon>
+              <SIcon><AiFillHome /></SIcon>
               Home
             </CustomRounterLink>
-          </Li>
-          <Li>
+          </SLi>
+          <SLi>
             <CustomRounterLink to="/salvos">
-              <Icon className="icon-bookmark" />
+              <SIcon className="icon-bookmark" />
               Salvos
             </CustomRounterLink>
-          </Li>
-          <Li>
+          </SLi>
+          <SLi>
             <CustomLink href="https://github.com/joaopedr0sena" target="_blank">
-              <Icon>+</Icon>
+              <SIcon>+</SIcon>
               Projetos
             </CustomLink>
-          </Li>
-        </Ul>
-      </ItemsMenu>
-    </DivMain>
+          </SLi>
+        </SUl>
+      </SItemsMenu>
+    </SDivMain>
   );
 }
