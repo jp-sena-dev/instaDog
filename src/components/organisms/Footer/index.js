@@ -1,11 +1,11 @@
 import React from 'react';
-import { FDiv, FFooter, SParagraph } from './styles';
 import CustomLink from '../../atoms/CustomLink';
+import { SDiv, SFooter, SParagraph } from './styles';
 
 export default function Footer() {
   return (
-    <FFooter>
-      <FDiv>
+    <SFooter>
+      <SDiv>
         <CustomLink
           to="https://github.com/joaopedr0sena"
           target="_blank"
@@ -33,7 +33,7 @@ export default function Footer() {
             João pedro
           </CustomLink>
         </SParagraph>
-      </FDiv>
-    </FFooter>
+      </SDiv>
+    </SFooter>
   );
 }
