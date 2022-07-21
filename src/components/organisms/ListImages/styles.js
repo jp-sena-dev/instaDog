@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
-export const ImgDiv = styled.div`
+export const SImagesDiv = styled.div`
   min-height: 80vh;
 `;
 
-export const ImageUl = styled.ul`
+export const SImagesUl = styled.ul`
   display: flex;
   padding: 0;
   flex-direction: column;
   align-items: center;
 `;
 
-export const Loading = styled.div`
+export const SLoading = styled.div`
   display: block;
   animation: is-rotating 2s infinite;
 
@@ -31,7 +31,7 @@ export const Loading = styled.div`
   }
 `;
 
-export const ImgLi = styled.li`
+export const SImageLi = styled.li`
   list-style-type: none;
   
   display: grid;
@@ -55,12 +55,7 @@ export const ImgLi = styled.li`
   }
 `;
 
-export const DivLi = styled.div`
-  height: 100%;
-  width: 100%;
-`;
-
-export const DivObserver = styled.div`
+export const SDivObserver = styled.div`
   height: 100px;
   width: 100%;
 `;

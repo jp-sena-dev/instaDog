@@ -5,20 +5,20 @@ import FooterImage from '../../molecules/FooterImage';
 import getImages from '../../../utils/APIs/getImages';
 import { useImages } from '../../../context/ImagesContext';
 import {
-  ImgLi,
-  ImgDiv,
-  ImageUl,
-  Loading,
-  DivObserver,
+  SLoading,
+  SImageLi,
+  SImagesUl,
+  SImagesDiv,
+  SDivObserver,
 } from './styles';
 
 export default function ListImages() {
-  const [loading, setLoading] = useState(true);
   const { feed, addList } = useImages();
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
 
   const get = async (list) => {
-    if (!list.length) {
+    if (!list) {
       const images = await getImages();
       addList(images, 'feed');
     } else {
@@ -48,29 +48,29 @@ export default function ListImages() {
     }
   }, [feed]);
 
-  if (!loading && !feed.length) {
+  if (!loading && !feed) {
     return (
       <div>
-        <Loading />
-        <DivObserver className="observer" />
+        <SLoading />
+        <SDivObserver className="observer" />
       </div>
     );
   }
 
   return (
-    <ImgDiv>
-      <ImageUl>
+    <SImagesDiv>
+      <SImagesUl>
         {
           feed && feed.map((imageUrl) => (
-            <ImgLi key={imageUrl}>
+            <SImageLi key={imageUrl}>
               <HeaderImage />
               <MainImage imageUrl={imageUrl} />
               <FooterImage imageUrl={imageUrl} />
-            </ImgLi>
+            </SImageLi>
           ))
         }
-      </ImageUl>
-      <DivObserver className="observer" />
-    </ImgDiv>
+      </SImagesUl>
+      <SDivObserver className="observer" />
+    </SImagesDiv>
   );
 }
