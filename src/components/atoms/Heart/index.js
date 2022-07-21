@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import IconHeart from './styles';
+import { SIconHeart } from './styles';
 import '../../../assets/icons/icomoon/style.css';
 import { useImages } from '../../../context/ImagesContext';
 
-export default function Heart(props) {
-  const { imageUrl } = props;
-
+export default function Heart({ imageUrl }) {
   const { checkInList, addList, removeList } = useImages();
   const inList = checkInList(imageUrl, 'likeList');
 
@@ -23,13 +21,7 @@ export default function Heart(props) {
 
   useEffect(() => {
     checkColor();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [enjoy]);
-
-  useEffect(() => {
-    checkColor();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  });
 
   const handleChange = () => {
     if (!enjoy) {
@@ -47,7 +39,7 @@ export default function Heart(props) {
   };
 
   return (
-    <IconHeart
+    <SIconHeart
       color={colorHeart}
       animation={animation}
       onClick={handleChange}
