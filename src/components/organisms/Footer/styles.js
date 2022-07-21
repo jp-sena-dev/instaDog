@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const FFooter = styled.footer`
+export const SFooter = styled.footer`
   height: 10vh;
 `;
 
-export const FDiv = styled.div`
+export const SDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

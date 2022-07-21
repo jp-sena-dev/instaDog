@@ -1,11 +1,11 @@
 import React from 'react';
-import { DivAlert, Section } from './styles';
+import { SDivAlert, SSection } from './styles';
 
 export default function Alert(props) {
   const { display } = props;
   return (
-    <DivAlert display={display}>
-      <Section>Copiado...</Section>
-    </DivAlert>
+    <SDivAlert display={display}>
+      <SSection>Copiado...</SSection>
+    </SDivAlert>
   );
 }

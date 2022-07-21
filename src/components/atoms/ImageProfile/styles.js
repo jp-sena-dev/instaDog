@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ImgProfile = styled.img`
+export const SImgProfile = styled.img`
   margin-right: 10px;
   margin-left: 5px;
   width: 40px;

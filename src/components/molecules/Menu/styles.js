@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-export const MIcon = styled.p`
+export const SBurgerIcon = styled.p`
   cursor: pointer;
   font-size: 1.5rem;
 `;
 
-export const DivMain = styled.div`
+export const SDivMain = styled.div`
   position: relative;
 `;
 
-export const Ul = styled.ul`
+export const SUl = styled.ul`
   width: 100%;
   height: 100%;
   margin: 0;
@@ -29,7 +29,7 @@ export const Ul = styled.ul`
   }
 `;
 
-export const Li = styled.li`
+export const SLi = styled.li`
   list-style-type: none;
 
   color: black;
@@ -54,13 +54,11 @@ export const Li = styled.li`
 `;
 
 const setDisplay = (state) => {
-  if (state) {
-    return 'opacity: 1; visibility: visible; height: 120px; width: 120px;font-size: 1em;';
-  }
+  if (state) return ('opacity: 1; visibility: visible; height: 120px; width: 120px;font-size: 1em;');
   return 'opacity: 0; visibility: hidden; height: 0px; width: 0px;font-size: 0;';
 };
 
-export const ItemsMenu = styled.div`
+export const SItemsMenu = styled.div`
   ${({ show }) => (setDisplay(show))};
   transition: height 0.25s;
   transition: 0.5s;
@@ -74,7 +72,7 @@ export const ItemsMenu = styled.div`
   border-radius: 20% 5% 20% 20%;
 `;
 
-export const Icon = styled.i`
+export const SIcon = styled.i`
   margin-right: 5px;
   font-size: 1em;
 `;

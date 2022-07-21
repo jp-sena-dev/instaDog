@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { IconPlane } from './styles';
+import { SIconPlane } from './styles';
 import Alert from '../Alert';
 import '../../../assets/icons/icomoon/style.css';
 
-export default function Plane(props) {
-  const { imageUrl } = props;
+export default function Plane({ imageUrl }) {
   const [alertDisplay, setAlertDisplay] = useState('none');
+
   const changeAlertDisplay = () => {
     setTimeout(() => {
       setAlertDisplay('none');
@@ -15,7 +15,7 @@ export default function Plane(props) {
 
   return (
     <>
-      <IconPlane
+      <SIconPlane
         type="bookmark"
         onClick={() => {
           navigator.clipboard.writeText(`${imageUrl}`);

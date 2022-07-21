@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  LUl,
-  LLi,
-  LImg,
-  Lmain,
-} from './styles';
 import { useImages } from '../../../context/ImagesContext';
+import {
+  SUl,
+  SLi,
+  SImg,
+  Smain,
+} from './styles';
 
 export default function ListImagesSaved() {
   const navigate = useNavigate();
@@ -22,14 +22,14 @@ export default function ListImagesSaved() {
   };
 
   return (
-    <Lmain>
-      <LUl>
+    <Smain>
+      <SUl>
         {list.map((image) => (
-          <LLi key={image} onClick={() => handleChangeFeed(image)}>
-            <LImg src={image} alt="ft-salva" />
-          </LLi>
+          <SLi key={image} onClick={() => handleChangeFeed(image)}>
+            <SImg src={image} alt="ft-salva" />
+          </SLi>
         ))}
-      </LUl>
-    </Lmain>
+      </SUl>
+    </Smain>
   );
 }

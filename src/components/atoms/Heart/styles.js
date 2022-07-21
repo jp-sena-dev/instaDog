@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 const anim = (thereIs) => {
-  if (thereIs === true) {
-    return '1.55em';
-  }
+  if (thereIs === true) return '1.55em';
   return '1.5em';
 };
 
-const IconHeart = styled.i`
+export const SIconHeart = styled.i`
   transition: 0.2s;
   cursor: pointer;
   color: ${({ color }) => (`rgb(${color})`)};
@@ -21,5 +19,3 @@ const IconHeart = styled.i`
   }
 
 `;
-
-export default IconHeart;

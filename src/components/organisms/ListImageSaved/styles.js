@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LUl = styled.ul`
+export const SUl = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -9,14 +9,14 @@ export const LUl = styled.ul`
   width: 100%;
 `;
 
-export const Lmain = styled.div`
+export const Smain = styled.div`
   display: block;
   margin: 0 auto;
   min-height: 80vh;
   max-width: 768px;
 `;
 
-export const LLi = styled.li`
+export const SLi = styled.li`
   list-style-type: none;  
   background-color: black;
 
@@ -66,7 +66,7 @@ export const LLi = styled.li`
 
 `;
 
-export const LImg = styled.img`
+export const SImg = styled.img`
   width: 100%;
   height: 100%;
 `;

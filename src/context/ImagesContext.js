@@ -23,15 +23,15 @@ export default function ImagesProvider({ children }) {
 
   const addList = useCallback((item, list) => {
     if (list === 'likeList') {
-      if (!likeList.length) {
+      if (!likeList) {
         setLikeList([item]);
-      } else if (likeList.length) {
+      } else if (likeList) {
         setLikeList([item, ...likeList]);
       }
     } else if (list === 'savedList') {
-      if (!savedList.length) {
+      if (!savedList) {
         setSavedList([item]);
-      } else if (savedList.length) {
+      } else if (savedList) {
         setSavedList([item, ...savedList]);
       }
     } else if (list === 'feed') {
@@ -73,15 +73,15 @@ export default function ImagesProvider({ children }) {
 
   const checkInList = useCallback((item, list) => {
     let thereIs = false;
-    let thisList = [];
+    let newList = [];
 
     if (list === 'likeList') {
-      thisList = likeList;
+      newList = likeList;
     } else if (list === 'savedList') {
-      thisList = savedList;
+      newList = savedList;
     }
 
-    thisList.forEach((element) => {
+    newList.forEach((element) => {
       if (element === item) {
         thereIs = true;
       }

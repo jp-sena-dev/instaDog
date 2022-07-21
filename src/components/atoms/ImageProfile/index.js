@@ -1,10 +1,10 @@
 import React from 'react';
-import { ImgProfile } from './styles';
+import { SImgProfile } from './styles';
 import profileTheDog from '../../../assets/imgs/profileTheDog.jpeg';
 
 export default function ImageProfile() {
   return (
-    <ImgProfile
+    <SImgProfile
       src={profileTheDog}
       alt="foto-perfil"
     />
