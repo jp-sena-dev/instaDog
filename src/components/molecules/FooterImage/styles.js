@@ -1,15 +1,8 @@
 import styled from 'styled-components';
 
-export const FooterDiv = styled.div`
-  padding-top: 0.2em;
+export const SFooterDiv = styled.div`
   border-top: 1px solid #00000030;
   display: flex;
+  padding-top: 0.2em;
   justify-content: space-between;
-`;
-
-export const Icons = styled.i`
-  font-size: 1.5em;
-  cursor: pointer;
-  color: black;
-  margin-right: 5px;
 `;
