@@ -1,11 +1,11 @@
 import React from 'react';
 import ImageDog from '../../atoms/ImageDog';
-import { DivImage } from './styles';
+import { SDivImage } from './styles';
 
 export default function MainImage({ imageUrl }) {
   return (
-    <DivImage>
+    <SDivImage>
       <ImageDog imageUrl={imageUrl} alt="Dog-img" />
-    </DivImage>
+    </SDivImage>
   );
 }
