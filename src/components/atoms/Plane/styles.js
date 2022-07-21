@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-// eslint-disable-next-line import/prefer-default-export
-export const IconPlane = styled.i`
+export const SIconPlane = styled.i`
   font-size: 1.5em;
   cursor: pointer;
   transition: 0.3s;
