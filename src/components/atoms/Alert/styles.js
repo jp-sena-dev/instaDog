@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const DivAlert = styled.div`
+export const SDivAlert = styled.div`
   transition: 0.5s;
   position: fixed;
   z-index: 11;
@@ -17,7 +17,7 @@ export const DivAlert = styled.div`
   background-color: #0971B3;
 `;
 
-export const Section = styled.section`
+export const SSection = styled.section`
   width: 100%;
   height: 90%;
   background-color: white;
