@@ -13,7 +13,7 @@ export default function Footer() {
           gitHub
         </CustomLink>
         <CustomLink
-          to="https://br.linkedin.com/"
+          to="https://www.linkedin.com/in/jp-sena-dev/"
           target="_blank"
         >
           linkedIn
@@ -27,7 +27,7 @@ export default function Footer() {
         <SParagraph>
           developer by:
           <CustomLink
-            to="https://github.com/joaopedr0sena?tab=repositories"
+            to="https://www.linkedin.com/in/jp-sena-dev/"
             target="_blank"
           >
             João pedro
