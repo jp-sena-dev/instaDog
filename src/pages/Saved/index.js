@@ -1,14 +1,11 @@
 import React from 'react';
-import Nav from '../../components/Nav';
-import Footer from '../../components/Footer';
-import ListImagesSaved from './ListImagesSaved';
+import PageTemplates from '../../components/templates/Page';
+import ListImageSaved from '../../components/organisms/ListImageSaved';
 
 export default function Saved() {
   return (
-    <div>
-      <Nav />
-      <ListImagesSaved />
-      <Footer />
-    </div>
+    <PageTemplates
+      content={<ListImageSaved />}
+    />
   );
 }

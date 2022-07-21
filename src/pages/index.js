@@ -1,3 +1,3 @@
 export { default as Home } from './Home';
 export { default as Saved } from './Saved';
-export { default as ShowImage } from './showImage';
+export { default as ShowImages } from './showImages';
