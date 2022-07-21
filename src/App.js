@@ -7,7 +7,7 @@ export default function App() {
   return (
     <ImagesProvider>
       <Routes>
-        <Route path="/Feed/:list/:initialImg" element={<Page.Feed />} />
+        <Route path="/showImage/:image" element={<Page.ShowImage />} />
         <Route path="/salvos" element={<Page.Saved />} />
         <Route path="/" element={<Page.Home />} />
       </Routes>

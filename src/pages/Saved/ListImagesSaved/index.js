@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   LUl,
   LLi,
@@ -8,17 +9,17 @@ import {
 import { useImages } from '../../../context/ImagesContext';
 
 export default function ListImagesSaved() {
+  const navigate = useNavigate();
   const { savedList } = useImages();
   const [list, setList] = useState([]);
-  const [initialImg, setInitialImg] = useState('');
 
   useEffect(() => {
     setList(savedList);
   }, [savedList]);
 
   const handleChangeFeed = (image) => {
-    setInitialImg(image);
-    console.log(initialImg);
+    navigate(`/showImage/${savedList.indexOf(image)}`);
+    console.log(image);
   };
 
   return (
