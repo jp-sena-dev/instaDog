@@ -1,29 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SIconPlane } from './styles';
-import Alert from '../Alert';
 import '../../../assets/icons/icomoon/style.css';
+import { useShare } from '../../../context/ShareModalContext';
 
 export default function Plane({ imageUrl }) {
-  const [alertDisplay, setAlertDisplay] = useState('none');
-
-  const changeAlertDisplay = () => {
-    setTimeout(() => {
-      setAlertDisplay('none');
-    }, 2000);
-    setAlertDisplay('block');
-  };
+  const { setShareImage, setShow } = useShare();
 
   return (
-    <>
-      <SIconPlane
-        type="bookmark"
-        onClick={() => {
-          navigator.clipboard.writeText(`${imageUrl}`);
-          changeAlertDisplay();
-        }}
-        className="icon-paper-plane icon"
-      />
-      <Alert display={alertDisplay} />
-    </>
+    <SIconPlane
+      type="bookmark"
+      onClick={() => {
+        setShareImage(`${imageUrl}`);
+        setShow(true);
+      }}
+      className="icon-paper-plane icon"
+    />
   );
 }
