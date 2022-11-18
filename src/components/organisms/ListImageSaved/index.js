@@ -18,7 +18,7 @@ export default function ListImagesSaved() {
   }, [savedList]);
 
   const handleChangeFeed = (image) => {
-    navigate(`/showImage/${image.replace(/[/]/g, '&')}`);
+    navigate(`/showImage/${image.replace(/[/]/g, 'E').replace(/:/g, 'I')}`);
   };
 
   return (

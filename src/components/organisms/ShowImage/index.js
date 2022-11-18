@@ -8,8 +8,8 @@ export default function ShowImage({ image }) {
   return (
     <SImageDiv>
       <HeaderImage />
-      <MainImage imageUrl={image.replace(/&/g, '/')} />
-      <FooterImage imageUrl={image.replace(/&/g, '/')} />
+      <MainImage imageUrl={image.replace(/E/g, '/').replace(/I/g, ':')} />
+      <FooterImage imageUrl={image.replace(/E/g, '/').replace(/I/g, ':')} />
     </SImageDiv>
   );
 }

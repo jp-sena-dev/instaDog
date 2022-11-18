@@ -7,15 +7,15 @@ import IconShare from '../../atoms/IconShare';
 export default function ShareOptions({ shareImage }) {
   const links = {
     facebook: {
-      link: `https://www.facebook.com/sharer/sharer.php?u=https://insta-dog.vercel.app/showImage/${shareImage}`,
+      link: `https://www.facebook.com/sharer/sharer.php?u=https://insta-dog.vercel.app/showImage/${shareImage.replace(/[/]/g, 'E').replace(/:/g, 'I')}`,
       icon: <FaFacebook />,
     },
     whatsApp: {
-      link: `https://api.whatsapp.com/send?text=https://insta-dog.vercel.app/showImage/${shareImage}`,
+      link: `https://api.whatsapp.com/send?text=https://insta-dog.vercel.app/showImage/${shareImage.replace(/[/]/g, 'E').replace(/:/g, 'I')}`,
       icon: <IoLogoWhatsapp />,
     },
     twitter: {
-      link: `https://twitter.com/intent/tweet?url=https://insta-dog.vercel.app/showImage/${shareImage}`,
+      link: `https://twitter.com/intent/tweet?url=https://insta-dog.vercel.app/showImage/${shareImage.replace(/[/]/g, 'E').replace(/:/g, 'I')}`,
       icon: <FaTwitter />,
     },
   };
