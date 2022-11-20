@@ -60,8 +60,7 @@ const setDisplay = (state) => {
 
 export const SItemsMenu = styled.div`
   ${({ show }) => (setDisplay(show))};
-  transition: height 0.25s;
-  transition: 0.5s;
+  transition: 0.15s;
   position: absolute;
   right: 1px;
   
