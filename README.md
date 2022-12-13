@@ -7,7 +7,7 @@
 ## :computer: Pré-requisitos
 
 - <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="nodejs" width="20" height="20"/> NodeJS
-- <img src="https://raw.githubusercontent.com/gurayyarar/NodeJsPackageManager/master/images/app.png" alt="package manager" width="20" height="20"/> Gerenciador de Pacotes para NodeJS (NPM or Yarn)
+- <img src="https://raw.githubusercontent.com/gurayyarar/NodeJsPackageManager/master/images/app.png" alt="package manager" width="20" height="20"/> Gerenciador de Pacotes para NodeJS (NPM ou Yarn)
 
 ## :page_facing_up: Instalando InstaDog
 Para instalar o projeto, digite em seu terminal:
