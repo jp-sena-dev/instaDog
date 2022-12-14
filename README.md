@@ -23,4 +23,9 @@ $ yarn
 Em sua CLI (Linha de comando), utilize:
 - `yarn start` ou `npm start`;
 
+## :hammer_and_wrench: Ferramentas utilizadas
+- <a href="https://pt-br.reactjs.org/docs/getting-started.html" alt="ReactJs" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="20" height="20"/> ReactJs; </a>
+- <a href="https://reactrouter.com/en/main/start/tutorial" alt="RounterDom" target="_blank"><img src="https://seekicon.com/free-icon-download/react-router_1.svg" width="20" height="20"/> RounterDom; </a>
+- <a href="https://styled-components.com/docs" target="_blank"><img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" width="20" height="20"/> Styled component;</a>
+- <a href="https://dog.ceo/dog-api/" target="_blank" alt="DogAPI">:dog2: DogAPI; </a>
 
