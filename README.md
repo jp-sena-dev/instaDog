@@ -1,10 +1,8 @@
-# InstaDog
+# :dog: InstaDog
 
-### Bem vindo(a) :wave:
+:wave: Boas vindas ao InstaDog! o desenvolvimento desta aplicação teve o intuito de aprofundar o conhecimento em `ReactJS`, e `StyledComponents`. utilizando uma `API` que retorna algumas fotos de chachorro, criando um pequeno feed com interações nas fotos.
 
 <img src="https://user-images.githubusercontent.com/85967112/207317084-64a59efa-2b26-4fe9-83a5-ffb0b13ba082.png"/>
-
-> Esse projeto cria um feed com algumas fotos de cachorros e você pode curtir, compartilha e salvar.
 
 ## :computer: Pré-requisitos
 
@@ -23,9 +21,23 @@ $ yarn
 Em sua CLI (Linha de comando), utilize:
 - `yarn start` ou `npm start`;
 
-## :hammer_and_wrench: Ferramentas utilizadas
-- <a href="https://pt-br.reactjs.org/docs/getting-started.html" alt="ReactJs" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="20" height="20"/> ReactJs; </a>
-- <a href="https://reactrouter.com/en/main/start/tutorial" alt="RounterDom" target="_blank"><img src="https://seekicon.com/free-icon-download/react-router_1.svg" width="20" height="20"/> RounterDom; </a>
-- <a href="https://styled-components.com/docs" target="_blank"><img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" width="20" height="20"/> Styled component;</a>
-- <a href="https://dog.ceo/dog-api/" target="_blank" alt="DogAPI">:dog2: DogAPI; </a>
+## :hammer_and_wrench: Principais ferramentas e serviços
+- React;
+- Eslint;
+- DogAPI;
+- Router Dom;
+- Styled components;
 
+<div align="center">
+  <img height="100" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/> 
+  &nbsp;&nbsp;&nbsp;
+  <img height="100" width="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" />
+  &nbsp;&nbsp;&nbsp;
+  <img height="100" width="100" src="https://dog.ceo/img/dog-api-logo.svg" />
+  &nbsp;&nbsp;&nbsp;
+  <img height="100" width="100" src="https://seekicon.com/free-icon-download/react-router_1.svg" />
+  &nbsp;&nbsp;&nbsp;
+  <img height="100" width="100" src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" />
+</div>
+
+<h1><a href="https://insta-dog.vercel.app/" >Visite a Aplicação</a></h1>
