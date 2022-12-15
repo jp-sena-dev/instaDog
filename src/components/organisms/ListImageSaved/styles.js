@@ -66,7 +66,8 @@ export const SLi = styled.li`
 
 `;
 
-export const SImg = styled.img`
+export const SImg = styled.div`
+  background: #ffff url(${({ src }) => src}) center;
   width: 100%;
   height: 100%;
 `;
