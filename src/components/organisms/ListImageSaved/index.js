@@ -7,6 +7,7 @@ import {
   SImg,
   Smain,
 } from './styles';
+import { changeUrl } from '../../../utils/urlImages';
 
 export default function ListImagesSaved() {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ export default function ListImagesSaved() {
   }, [savedList]);
 
   const handleChangeFeed = (image) => {
-    navigate(`/showImage/${image.replace(/[/]/g, 'E').replace(/:/g, 'I')}`);
+    navigate(`/showImage/${changeUrl(image)}`);
   };
 
   return (
