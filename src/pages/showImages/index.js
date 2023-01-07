@@ -7,6 +7,7 @@ import { fixUrl } from '../../utils/urlImages';
 export default function ShowImages() {
   const { image } = useParams();
   const url = fixUrl(image);
+  console.log(url);
 
   return (
     <PageTemplates content={<ShowImage image={url} />} />
