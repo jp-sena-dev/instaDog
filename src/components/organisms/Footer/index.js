@@ -7,7 +7,7 @@ export default function Footer() {
     <SFooter>
       <SDiv>
         <CustomLink
-          to="https://github.com/joaopedr0sena"
+          to="https://github.com/jp-sena-dev"
           target="_blank"
         >
           gitHub
@@ -19,7 +19,7 @@ export default function Footer() {
           linkedIn
         </CustomLink>
         <CustomLink
-          to="https://github.com/joaopedr0sena?tab=repositories"
+          to="https://github.com/jp-sena-dev?tab=repositories"
           target="_blank"
         >
           outros projetos

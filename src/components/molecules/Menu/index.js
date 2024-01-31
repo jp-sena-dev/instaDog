@@ -37,7 +37,7 @@ export default function Menu() {
             </CustomRounterLink>
           </SLi>
           <SLi>
-            <CustomLink href="https://github.com/joaopedr0sena" target="_blank">
+            <CustomLink href="https://github.com/jp-sena-dev" target="_blank">
               <SIcon>+</SIcon>
               Projetos
             </CustomLink>
