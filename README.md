@@ -2,6 +2,7 @@
 
 :wave: Boas vindas ao InstaDog! Esta aplicação tem como objetivo criar um feed (estilo [Instagram](https://www.instagram.com/)) a partir de requisições feitas para a Interface de Programação de Aplicação (API) [DogAPI](https://dog.ceo/dog-api/).
 
+
 ![telas](https://user-images.githubusercontent.com/85967112/207317084-64a59efa-2b26-4fe9-83a5-ffb0b13ba082.png)
 >### [Visite a Aplicação](https://insta-dog.vercel.app/)
 
